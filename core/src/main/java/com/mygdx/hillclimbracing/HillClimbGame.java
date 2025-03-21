@@ -26,10 +26,17 @@ public class HillClimbGame extends ApplicationAdapter {
     private Body carBody, groundBody;
     private Body leftWheelBody, rightWheelBody;
     private RevoluteJoint leftWheelJoint, rightWheelJoint;
+<<<<<<< HEAD
     private static final float PPM = 24f; 
 
     private boolean isCarFlipped = false;
     private final float FLIP_THRESHOLD = 0.5f; 
+=======
+    private static final float PPM = 24f;
+
+    private boolean isCarFlipped = false;
+    private final float FLIP_THRESHOLD = 0.5f;
+>>>>>>> 40f2c66 (Save local changes)
     private Rectangle respawnButtonRect;
 
     private Array<Vector2> terrainVerts;
@@ -233,8 +240,13 @@ public class HillClimbGame extends ApplicationAdapter {
         carBody.createFixture(carFixture);
         carShape.dispose();
 
+<<<<<<< HEAD
         createWheel(true); 
         createWheel(false); 
+=======
+        createWheel(true);
+        createWheel(false);
+>>>>>>> 40f2c66 (Save local changes)
     }
 
     private float getTerrainHeightAt(float x) {
@@ -483,12 +495,21 @@ public class HillClimbGame extends ApplicationAdapter {
     private void drawCar() {
         float carAngle = carBody.getAngle() * MathUtils.radiansToDegrees;
 
+<<<<<<< HEAD
         float visualHeight = CAR_HEIGHT * 1.5f; 
         float heightOffset = (visualHeight - CAR_HEIGHT) / 2; 
 
         batch.draw(carTexture,
                 carBody.getPosition().x - CAR_WIDTH/2,
                 carBody.getPosition().y - CAR_HEIGHT/2 - heightOffset, 
+=======
+        float visualHeight = CAR_HEIGHT * 1.5f;
+        float heightOffset = (visualHeight - CAR_HEIGHT) / 2;
+
+        batch.draw(carTexture,
+                carBody.getPosition().x - CAR_WIDTH/2,
+                carBody.getPosition().y - CAR_HEIGHT/2 - heightOffset,
+>>>>>>> 40f2c66 (Save local changes)
                 CAR_WIDTH/2, visualHeight/2,
                 CAR_WIDTH, visualHeight,
                 1, 1,
